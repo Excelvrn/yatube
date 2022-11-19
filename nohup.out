@@ -1,0 +1,2522 @@
+[05/Nov/2022 14:11:29] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 14:11:29] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.42.223', 37770)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 15:35:40] "GET /category/gej/ HTTP/1.1" 404 45
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 15:35:40] "GET /category/gej/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('37.145.61.164', 4440)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 15:35:40] "GET /favicon.ico HTTP/1.1" 404 45
+[05/Nov/2022 15:36:41] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 15:36:41] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('37.145.61.164', 4234)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 15:36:43] "GET /static/women/css/styles.css HTTP/1.1" 200 7853
+[05/Nov/2022 15:36:43] "GET /static/women/images/logo.png HTTP/1.1" 200 8129
+[05/Nov/2022 15:36:43] "GET /static/women/images/share_yt.png HTTP/1.1" 200 14175
+[05/Nov/2022 15:36:43] "GET /static/women/images/main.ico HTTP/1.1" 200 10462
+[05/Nov/2022 15:36:47] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 15:36:47] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('37.145.61.164', 4232)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 15:36:52] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 15:36:52] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('37.145.61.164', 4344)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 15:37:25] "GET /about/ HTTP/1.1" 200 2094
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 15:37:25] "GET /about/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('37.145.61.164', 4268)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 15:37:30] "GET /about/ HTTP/1.1" 200 2094
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 15:37:30] "GET /about/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('37.145.61.164', 4052)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 16:01:23] "GET /static/women/css/styles.css HTTP/1.1" 304 0
+[05/Nov/2022 16:01:23] "GET /static/women/images/share_yt.png HTTP/1.1" 304 0
+[05/Nov/2022 16:01:23] "GET /static/women/images/logo.png HTTP/1.1" 304 0
+[05/Nov/2022 19:01:21] code 400, message Bad request version ('À\x14À')
+[05/Nov/2022 19:01:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 20:16:52] code 400, message Bad request version ('À\x14À')
+[05/Nov/2022 20:16:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 20:16:52] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x13+\x84\x93Û\x0f\x016üÞzJ\x7f\x9f\x19)Ì>@\x8dî\x86\x80S\x91p%\x96¤\x05å®\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[05/Nov/2022 20:16:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 20:16:53] code 400, message Bad request version ('À\x14À')
+[05/Nov/2022 20:16:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[05/Nov/2022 20:37:56] "GET / HTTP/1.0" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 20:37:56] "GET / HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('118.123.105.69', 50288)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 20:46:53] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 20:46:53] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('185.180.143.11', 35718)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 21:50:22] "GET /static/women/css/styles.css HTTP/1.1" 304 0
+[05/Nov/2022 21:50:22] "GET /static/women/images/share_yt.png HTTP/1.1" 304 0
+[05/Nov/2022 21:50:22] "GET /static/women/images/logo.png HTTP/1.1" 304 0
+[05/Nov/2022 21:50:25] "GET /about/ HTTP/1.1" 200 2094
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 21:50:25] "GET /about/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('178.176.213.98', 36169)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 21:50:26] "GET /static/women/images/main.ico HTTP/1.1" 304 0
+[05/Nov/2022 21:54:37] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 21:54:37] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('87.236.176.61', 48157)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 21:54:38] "GET /static/women/images/main.ico HTTP/1.1" 200 10462
+[05/Nov/2022 23:02:41] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 23:02:41] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 35998)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 23:02:43] "GET /static/women/css/styles.css HTTP/1.1" 200 7853
+[05/Nov/2022 23:02:45] "GET /static/women/images/logo.png HTTP/1.1" 200 8129
+[05/Nov/2022 23:02:45] "GET /static/women/images/share_yt.png HTTP/1.1" 200 14175
+[05/Nov/2022 23:02:53] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 23:02:53] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 36086)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[05/Nov/2022 23:04:11] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[05/Nov/2022 23:04:11] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 36068)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 00:48:19] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 00:48:19] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 41622)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 00:48:19] "GET /static/women/css/styles.css HTTP/1.1" 200 7853
+[06/Nov/2022 00:48:19] "GET /static/women/images/logo.png HTTP/1.1" 200 8129
+[06/Nov/2022 00:48:19] "GET /static/women/images/share_yt.png HTTP/1.1" 200 14175
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.119', 40422)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Nov/2022 01:06:57] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 01:06:57] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.119', 57604)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 01:06:57] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 01:06:57] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('167.94.138.119', 53912)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 01:06:57] code 505, message Invalid HTTP version (2.0)
+[06/Nov/2022 01:06:57] "PRI * HTTP/2.0" 505 -
+[06/Nov/2022 01:06:57] "GET /static/women/images/main.ico HTTP/1.1" 200 10462
+[06/Nov/2022 01:06:58] "GET /favicon.ico HTTP/1.1" 404 45
+[06/Nov/2022 01:17:38] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 01:17:38] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 42280)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 03:05:52] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 03:05:52] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('184.105.139.77', 47593)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 06:09:45] code 400, message Bad request version ('À\x14À')
+[06/Nov/2022 06:09:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Nov/2022 06:09:45] code 400, message Bad request version ('À\x14À')
+[06/Nov/2022 06:09:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Nov/2022 06:09:45] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03¡\x06)´A]#»\x92ôK±mâ-sÏÕ\x02o,\x91\x97\x9cì´ê\x00\x8fl»ï\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[06/Nov/2022 06:09:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[06/Nov/2022 06:45:04] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 06:45:04] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 48646)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 06:45:05] "GET /static/women/css/styles.css HTTP/1.1" 304 0
+[06/Nov/2022 06:45:05] "GET /static/women/images/logo.png HTTP/1.1" 304 0
+[06/Nov/2022 06:45:05] "GET /static/women/images/share_yt.png HTTP/1.1" 304 0
+[06/Nov/2022 07:33:10] "GET / HTTP/1.1" 200 2057
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 07:33:10] "GET / HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 50998)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 07:33:18] "GET /about/ HTTP/1.1" 200 2094
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 07:33:18] "GET /about/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 51004)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 07:33:20] "GET /addpage/ HTTP/1.1" 403 22
+[06/Nov/2022 07:33:20] "GET /favicon.ico HTTP/1.1" 404 45
+[06/Nov/2022 07:33:22] "GET /favicon.ico HTTP/1.1" 404 45
+[06/Nov/2022 07:33:23] "GET /contact/ HTTP/1.1" 200 3267
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 07:33:23] "GET /contact/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 51064)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 07:33:23] "GET /captcha/image/7180f0d5eedafbae9dac627cf150b7082f2c4dc7/ HTTP/1.1" 200 4863
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 07:33:23] "GET /captcha/image/7180f0d5eedafbae9dac627cf150b7082f2c4dc7/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('95.32.113.23', 51068)
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/socketserver.py", line 650, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.7/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.7/socketserver.py", line 720, in __init__
+    self.handle()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[06/Nov/2022 07:33:31] "GET /about/ HTTP/1.1" 200 2094
+Traceback (most recent call last):
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 183, in finish_response
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.7/wsgiref/simple_server.py", line 38, in close
+    SimpleHandler.close(self)
+  File "/usr/lib/python3.7/wsgiref/handlers.py", line 321, in close
+    self.result.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/http/response.py", line 252, in close
+    signals.request_finished.send(sender=self._handler_class)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in send
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/dispatch/dispatcher.py", line 175, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/__init__.py", line 57, in close_old_connections
+    conn.close_if_unusable_or_obsolete()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/base/base.py", line 514, in close_if_unusable_or_obsolete
+    self.close()
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 248, in close
+    if not self.is_in_memory_db():
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/base.py", line 367, in is_in_memory_db
+    return self.creation.is_in_memory_db(self.settings_dict['NAME'])
+  File "/home/soyage/venv/lib/python3.7/site-packages/django/db/backends/sqlite3/creation.py", line 12, in is_in_memory_db
+    return database_name == ':memory:' or 'mode=memory' in database_name
+TypeError: argument of type 'PosixPath' is not iterable
+[06/Nov/2022 07:33:31] "GET /about/ HTTP/1.1" 500 59
+python3: can't open file 'runserver': [Errno 2] No such file or directory
